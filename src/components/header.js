@@ -11,7 +11,6 @@ const Header = () => {
           Elysian Design
         </Link>
       </h1>
-      <p>Design well.</p>
       <nav>
         <ul className={headerStyles.navList}>
           <li>
@@ -38,7 +37,7 @@ const Header = () => {
               activeClassName={headerStyles.activeNavItem}
               to="/about"
             >
-              About Us
+              About
             </Link>
           </li>
           <li>

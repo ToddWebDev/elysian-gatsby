@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
@@ -9,7 +8,11 @@ const ContactPage = () => {
       <h2>Contact</h2>
       <p>
         The best way to reach us is via{" "}
-        <a href="https://www.instagram.com/_elysian_design" target="_blank">
+        <a
+          href="https://www.instagram.com/_elysian_design"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           @_elysian_design on Instagram
         </a>
       </p>
