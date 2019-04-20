@@ -3,5 +3,11 @@ module.exports = {
     title: "Elysian Gatsby",
     author: "Elysian Design",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: { name: "src", path: `${__dirname}/src/` },
+    },
+  ],
 }
