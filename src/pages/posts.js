@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import postsStyles from "./posts.module.scss"
+import Head from "../components/head"
 
 const PostsPage = () => {
   const data = useStaticQuery(graphql`
@@ -21,6 +22,7 @@ const PostsPage = () => {
 
   return (
     <Layout>
+      <Head title="Posts" />
       <h2>Posts</h2>
       <ol className={postsStyles.posts}>
         {data.allContentfulPost.edges.map(edge => {
