@@ -7,16 +7,12 @@ import postsStyles from "./posts.module.scss"
 const PostsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allContentfulPost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
-            frontmatter {
-              title
-              date
-            }
-            fields {
-              slug
-            }
+            title
+            slug
+            publishedDate(fromNow: true)
           }
         }
       }
@@ -27,12 +23,12 @@ const PostsPage = () => {
     <Layout>
       <h2>Posts</h2>
       <ol className={postsStyles.posts}>
-        {data.allMarkdownRemark.edges.map(edge => {
+        {data.allContentfulPost.edges.map(edge => {
           return (
-            <li className={postsStyles.post} key={edge.node.frontmatter.date}>
-              <Link to={`/posts/${edge.node.fields.slug}`}>
-                <h3>{edge.node.frontmatter.title}</h3>
-                <p>{edge.node.frontmatter.date}</p>
+            <li className={postsStyles.post} key={edge.node.publishedDate}>
+              <Link to={`/posts/${edge.node.slug}`}>
+                <h3>{edge.node.title}</h3>
+                <p>{edge.node.publishedDate}</p>
               </Link>
             </li>
           )
