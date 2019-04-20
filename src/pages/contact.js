@@ -13,8 +13,9 @@ const ContactPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          @_elysian_design on Instagram
+          @_elysian_design
         </a>
+        &nbsp; on Instagram.
       </p>
     </Layout>
   )

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Elysian Gatsby",
-    author: "Todd Rizzolo",
+    author: "Elysian Design",
   },
   plugins: ["gatsby-plugin-sass"],
 }
